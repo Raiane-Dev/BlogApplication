@@ -7,7 +7,7 @@ import com.application.blog.models.User;
 public interface UserInterface
 {
 
-    UserInterface getUserById( Long id );
+    User getUserById( Long id );
     
     List<User> getAllUsers();
     

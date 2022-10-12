@@ -10,7 +10,7 @@ public class User {
 
     public User()
     {
-        
+
     }
 
     public User( Long id, Integer age, String name, String email, String password  )
@@ -37,7 +37,7 @@ public class User {
         return this.age;
     }
 
-    public Integer setAge( Integer age )
+    public void setAge( Integer age )
     {
         this.age = age;
     }

@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  
+  database:
+    container_name: database
+    image: postgres:10.3
+    env_file: .env
+    volumes:
+        - postgres:/data/postgres
+    ports:
+      - "5431:5431"
+    restart: unless-stopped
+
+volumes:
+  postgres:

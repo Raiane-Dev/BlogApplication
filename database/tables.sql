@@ -5,3 +5,10 @@ CREATE TABLE users (
 	email VARCHAR ( 255 ) UNIQUE NOT NULL,
 	age integer not null
 );
+
+CREATE TABLE articles (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR ( 100 ) UNIQUE NOT NULL,
+	body TEXT NOT NULL,
+	posting_date DATE NOT NULL DEFAULT CURRENT_DATE
+);

@@ -1,4 +1,4 @@
-package com.application.blog.routes;
+package com.application.blog.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,17 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
-public class User
+public class UserController
 {
     @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public String user()
-    {
-        return "oi";
-    }
-
-    @RequestMapping( value="/article/{name}", method = RequestMethod.GET)
-    public void article( @PathVariable("name") String name )
+    public void user()
     {
 
     }
+
 }

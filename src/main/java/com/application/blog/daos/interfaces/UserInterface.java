@@ -13,7 +13,7 @@ public interface UserInterface
     
     boolean deleteUser( User user );
 
-    boolean updateUser( User user );
+    boolean updateUser( Integer id, User user );
 
     boolean createUser( User user );
 }

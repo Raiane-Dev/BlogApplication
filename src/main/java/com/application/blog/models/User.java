@@ -1,11 +1,22 @@
 package com.application.blog.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
     
+    @JsonProperty("id")
     private Long id;
-    private Integer age;
+
+    @JsonProperty("name")
     private String name;
+
+    @JsonProperty("age")
+    private Integer age;
+
+    @JsonProperty("email")
     private String email;
+
+    @JsonProperty("password")
     private String password;
 
     public User()

@@ -23,7 +23,7 @@ public class UserDAO implements UserInterface
     private final String SQL_GET_ALL = "SELECT * FROM USERS";
     private final String SQL_DELETE_USER = "DELETE FROM USERS WHERE ID = ?";
     private final String SQL_UPDATE_USER = "UPDATE users SET name = ?, age = ?, email = ?, password = ? WHERE id = ?";
-    private final String SQL_INSERT_USER = "INSERT INTO USERS(name, age, email, password) VALUES(?, ?, ?, ?, ?)";
+    private final String SQL_INSERT_USER = "INSERT INTO users(name, age, email, password) VALUES(?, ?, ?, ?)";
 
     @Autowired
     public UserDAO(DataSource data)

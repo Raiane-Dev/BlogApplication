@@ -33,12 +33,18 @@ public class ArticleDAO implements ArticleInterface
 
     public Article getArticleById( Long id )
     {
-        return jdbcTemplate.queryForObject( SQL_FIND_ARTICLE, new ArticleMapper() );
+        return jdbcTemplate.queryForObject(
+            SQL_FIND_ARTICLE, 
+            new ArticleMapper()
+        );
     }
 
     public List<Article> getAllArticles()
     {
-        return jdbcTemplate.query( SQL_GET_ALL, new ArticleMapper() );
+        return jdbcTemplate.query( 
+            SQL_GET_ALL, 
+            new ArticleMapper()
+        );
     }
 
     public boolean deleteArticle( Article article )

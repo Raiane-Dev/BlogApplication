@@ -25,6 +25,7 @@ spec:
 
   - name: redis-container
     image: redis:5.0.4
+    schedule: h/30 * * * *
     command:
       - redis-server
       - "/redis-master/redis.conf"

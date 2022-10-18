@@ -23,12 +23,6 @@ public class UserController
         this.userInterfaceDAO = userInterfaceDAO;
     }
 
-    @GetMapping( value="/" )
-    public String index()
-    {
-        return "Hello feia";
-    }
-
     @GetMapping( value= "/users")
     public List<User> hasMany()
     {

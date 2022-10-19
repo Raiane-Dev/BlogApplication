@@ -11,6 +11,7 @@ public class FrontController
     public String index( ModelMap model )
     {
         model.addAttribute( "title", "Home" );
+        
         return "index";
     }
 }

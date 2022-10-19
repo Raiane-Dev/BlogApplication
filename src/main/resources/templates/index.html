@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset = "ISO-8859-1" />
-      <link href = "css/style.css" rel = "stylesheet"/>
-      <title>Blog</title>
-   </head>
-   <body>
-      <h4>Seja bem vindo a <span th:text="${title}"></span></h4>
-   </body>
-</html>
+<div th:include="fragments/header"/>
+
+<div layout:fragment="content">
+      <p>Changing contents</p>
+  </div>
+
+<div th:include="fragments/footer"/>

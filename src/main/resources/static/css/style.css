@@ -1,0 +1,72 @@
+* 
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --white:#ffffff;
+    --black:#15151b;
+    --black-two:#1a1a1f;
+    --ice:#e5e5e5;
+}
+body
+{
+    max-width: 100vw;
+    min-width: 100vw;
+}
+legend,
+fieldset,
+select,
+textarea,
+input,
+button
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input
+{
+    border: 1px solid;
+    border-color: var(--ice);
+    border-radius: 2em;
+    width: 100%;
+    font-size: .8rem;
+    color: var(--black);
+    padding: 1em;
+}
+
+/** PATTERN **/
+#root
+{
+    display: grid;
+    grid-template-columns: 25% 75% 25%;
+}
+section.two-columns
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: baseline;
+}
+/** HEADER / NAVBAR**/
+header
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    border-bottom: 1px solid var(--ice);
+    padding: 1em;
+}
+.navbar
+{
+    border-right: var(--ice);
+    border: 1px solid;
+}
+
+/** HOME **/
+
+/** FOOTER **/

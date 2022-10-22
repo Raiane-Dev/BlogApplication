@@ -3,19 +3,81 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 :root
 {
     --white:#ffffff;
     --black:#15151b;
     --black-two:#1a1a1f;
+    --gray:#636260;
     --ice:#e5e5e5;
 }
 body
 {
     max-width: 100vw;
     min-width: 100vw;
+}
+h1
+{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:var(--black);
+}
+h2
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--black);
+}
+h3
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:var(--black);
+}
+h4
+{
+    font-size: 1rem;
+    font-weight: 400;
+    color:var(--black);
+}
+h6
+{
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--black-two);
+}
+p, span
+{
+    font-size: .9rem;
+    font-weight: 400;
+    color:var(--gray);
+}
+a
+{
+    font-size: .9rem;
+    font-weight: 400;
+    color:var(--black-two);
+}
+button, input[type=submit]
+{
+    font-size: .9rem;
+    font-weight: 500;
+    color:var(--black);
+    padding: 1em;
+    border: 1px solid var(--black-two);
+}
+button.dark
+{
+    background-color: var(--black);
+    color:var(--white);
+}
+button.light
+{
+    background-color: transparent;
+    color:var(--black);
 }
 legend,
 fieldset,
@@ -53,20 +115,167 @@ section.two-columns
     grid-template-columns: 50% 50%;
     justify-content: baseline;
 }
+.columns-three
+{
+    display:  grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: baseline;
+}
+.row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.row.end
+{
+    justify-content: end;
+}
+.row.center
+{
+    justify-content: center;
+}
+.row.start
+{
+    justify-content: start;
+}
 /** HEADER / NAVBAR**/
 header
 {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 33% 33% 33%;
     border-bottom: 1px solid var(--ice);
+    justify-content: space-between;
+    width: 100%;
     padding: 1em;
+    align-items: center;
 }
-.navbar
+header div.box
+{   
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+header img 
 {
-    border-right: var(--ice);
-    border: 1px solid;
+    max-width: 4em;
+    border-radius: 50%;
+    filter: grayscale(1);
 }
+header h2
+{
+    font-weight:900;
+}
+header h6
+{
+    font-size: .9rem;
+}
+/** BODY **/
+.content
+{
+    padding: 2em;
+}
+
 
 /** HOME **/
+section.home
+{
+    text-align: center;
+    min-height: 100vh;
+}
+section.home h2.latest
+{
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+section.home h2.latest::after
+{
+    content: "a";
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    margin-top: .5em;
+    display: block;
+    color:var(--black);
+    bottom:0;
+    left:0;
 
+
+}
 /** FOOTER **/
+footer
+{
+    background-color: var(--black-two);
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+
+/** GRIDS **/
+.boxes
+{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-column-gap: 3em;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.box-single img
+{
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.box-single
+{
+    text-align: left;
+}
+.box-single h3
+{
+    font-size: 1.9rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+.box-single p 
+{
+    font-size: 1rem;
+    color:var(--gray);
+    font-weight: 300;
+    margin-top: 1em;
+}
+.box-single img:nth-of-type(1)
+{
+    display: none;
+}
+.box-single:nth-child(3n+3) img:nth-of-type(1) {
+  background: yellow;
+  display: block;
+
+}
+
+.box-user
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2em;
+}
+.box-user img
+{
+    max-width: 3em;
+    min-width: 3em;
+    border-radius: 50%;
+}
+.box-user div
+{
+    padding: 0 .5em;
+}

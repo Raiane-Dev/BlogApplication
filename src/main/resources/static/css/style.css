@@ -190,22 +190,23 @@ section.home
 section.home h2.latest
 {
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 10em;
+    position: relative;
+    text-align: center;
 }
 section.home h2.latest::after
 {
-    content: "a";
-    position: relative;
-    width: 100%;
+    content: "";
+    width: 10%;
     height: 1px;
     background-color: var(--black);
     margin-top: .5em;
     display: block;
     color:var(--black);
-    bottom:0;
-    left:0;
-
-
+    display: block;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
 }
 /** FOOTER **/
 footer
@@ -252,14 +253,12 @@ footer
     font-weight: 300;
     margin-top: 1em;
 }
-.box-single img:nth-of-type(1)
+.box-single .in_destach
 {
     display: none;
 }
-.box-single:nth-child(3n+3) img:nth-of-type(1) {
-  background: yellow;
+.box-single:nth-child(3n+3) .in_destach {
   display: block;
-
 }
 
 .box-user

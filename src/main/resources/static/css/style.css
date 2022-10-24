@@ -18,6 +18,7 @@ body
 {
     max-width: 100vw;
     min-width: 100vw;
+    text-align: center;
 }
 h1
 {
@@ -177,7 +178,7 @@ header h6
 /** BODY **/
 .content
 {
-    padding: 2em;
+    padding: 2em 10em;
 }
 
 
@@ -190,23 +191,37 @@ section.home
 section.home h2.latest
 {
     font-weight: 700;
-    margin-bottom: 10em;
-    position: relative;
-    text-align: center;
+    text-align: left;
+    font-size: 3rem;
 }
-section.home h2.latest::after
+.slider
 {
-    content: "";
-    width: 10%;
-    height: 1px;
-    background-color: var(--black);
-    margin-top: .5em;
-    display: block;
-    color:var(--black);
-    display: block;
-    position: absolute;
-    bottom: -1em;
-    left: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+}
+.slider img
+{
+    min-width: 60vw;
+    max-width: 60vw;
+    max-height: 50vh;
+    object-fit: cover;
+}
+.slider h2
+{
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    background: -webkit-linear-gradient(180deg, #000 70%, #fff 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slider p
+{
+    font-size: 1rem;
 }
 /** FOOTER **/
 footer
@@ -225,8 +240,8 @@ footer
 .boxes
 {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-column-gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    grid-column-gap: 5em;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -242,9 +257,8 @@ footer
 }
 .box-single h3
 {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
 }
 .box-single p 
 {
@@ -252,13 +266,6 @@ footer
     color:var(--gray);
     font-weight: 300;
     margin-top: 1em;
-}
-.box-single .in_destach
-{
-    display: none;
-}
-.box-single:nth-child(3n+3) .in_destach {
-  display: block;
 }
 
 .box-user
@@ -277,4 +284,31 @@ footer
 .box-user div
 {
     padding: 0 .5em;
+}
+
+@media screen and (max-width: 780px)
+{
+    .content
+    {
+        position: relative;
+    }
+    .slider
+    {
+        display: flex;
+        min-height: 50vh;
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .boxes
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .box-single
+    {
+        min-width: 70vw;
+        max-width: 70vw;
+    }
 }
